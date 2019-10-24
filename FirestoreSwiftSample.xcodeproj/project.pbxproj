@@ -15,6 +15,7 @@
 		BF739D88236191ED008CB8BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF739D87236191ED008CB8BF /* Preview Assets.xcassets */; };
 		BF739D8B236191ED008CB8BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF739D89236191ED008CB8BF /* LaunchScreen.storyboard */; };
 		BF739D9523619D34008CB8BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF739D9423619D34008CB8BF /* GoogleService-Info.plist */; };
+		BF739D9823619E8A008CB8BF /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF739D9723619E8A008CB8BF /* Row.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BF739D8A236191ED008CB8BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF739D8C236191ED008CB8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF739D9423619D34008CB8BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF739D9723619E8A008CB8BF /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,14 +76,15 @@
 		BF739D7D236191EB008CB8BF /* FirestoreSwiftSample */ = {
 			isa = PBXGroup;
 			children = (
+				BF739D9423619D34008CB8BF /* GoogleService-Info.plist */,
+				BF739D8C236191ED008CB8BF /* Info.plist */,
 				BF739D7E236191EB008CB8BF /* AppDelegate.swift */,
-				BF739D80236191EB008CB8BF /* SceneDelegate.swift */,
 				BF739D82236191EB008CB8BF /* ContentView.swift */,
+				BF739D80236191EB008CB8BF /* SceneDelegate.swift */,
 				BF739D84236191ED008CB8BF /* Assets.xcassets */,
 				BF739D89236191ED008CB8BF /* LaunchScreen.storyboard */,
-				BF739D8C236191ED008CB8BF /* Info.plist */,
-				BF739D9423619D34008CB8BF /* GoogleService-Info.plist */,
 				BF739D86236191ED008CB8BF /* Preview Content */,
+				BF739D9623619E60008CB8BF /* Views */,
 			);
 			path = FirestoreSwiftSample;
 			sourceTree = "<group>";
@@ -92,6 +95,14 @@
 				BF739D87236191ED008CB8BF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BF739D9623619E60008CB8BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF739D9723619E8A008CB8BF /* Row.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E17A9BBE4E662E8A99B66893 /* Frameworks */ = {
@@ -218,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF739D9823619E8A008CB8BF /* Row.swift in Sources */,
 				BF739D7F236191EB008CB8BF /* AppDelegate.swift in Sources */,
 				BF739D81236191EB008CB8BF /* SceneDelegate.swift in Sources */,
 				BF739D83236191EB008CB8BF /* ContentView.swift in Sources */,
