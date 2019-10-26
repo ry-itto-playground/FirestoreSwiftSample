@@ -9,18 +9,23 @@
 import SwiftUI
 
 struct ListView: View {
+    @ObservedObject var viewModel: ListViewModel
+
     var body: some View {
         ScrollView {
-            VStack {
-                LeftRow(text: "hogehoge")
-                RightRow(text: "hogehoge")
+            ForEach(viewModel.messages) { message in
+                LeftRow(text: message.message)
             }
-        }.padding()
+        }
+        .padding()
+        .onAppear {
+            self.viewModel.onAppearSubject.send()
+        }
     }
 }
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView()
+        ListView(viewModel: .init())
     }
 }

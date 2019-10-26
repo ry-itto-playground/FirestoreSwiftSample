@@ -22,7 +22,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            ListView()
+            ListView(viewModel: .init())
             Spacer()
             HStack {
                 TextField(.init("Message to send"), text: $inputText)

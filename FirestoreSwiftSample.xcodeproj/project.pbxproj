@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0780082ED3BABD8799A277C2 /* Pods_FirestoreSwiftSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152ED18E205AE3370809532A /* Pods_FirestoreSwiftSample.framework */; };
 		BF24C6342362E99F00480998 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF24C6332362E99F00480998 /* FirestoreManager.swift */; };
+		BF423DDB2364AA1E00048B02 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF423DDA2364AA1E00048B02 /* ListViewModel.swift */; };
 		BF739D7F236191EB008CB8BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF739D7E236191EB008CB8BF /* AppDelegate.swift */; };
 		BF739D81236191EB008CB8BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF739D80236191EB008CB8BF /* SceneDelegate.swift */; };
 		BF739D83236191EB008CB8BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF739D82236191EB008CB8BF /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 		152ED18E205AE3370809532A /* Pods_FirestoreSwiftSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirestoreSwiftSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		667F4428ECD5F1C219ABB3A8 /* Pods-FirestoreSwiftSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirestoreSwiftSample.debug.xcconfig"; path = "Target Support Files/Pods-FirestoreSwiftSample/Pods-FirestoreSwiftSample.debug.xcconfig"; sourceTree = "<group>"; };
 		BF24C6332362E99F00480998 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		BF423DDA2364AA1E00048B02 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		BF739D7B236191EB008CB8BF /* FirestoreSwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirestoreSwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF739D7E236191EB008CB8BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF739D80236191EB008CB8BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BF423DD92364AA0600048B02 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BF423DDA2364AA1E00048B02 /* ListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		BF739D72236191EB008CB8BF = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 				BF24C6322362E98800480998 /* Model */,
 				BF739D86236191ED008CB8BF /* Preview Content */,
 				BF739D9623619E60008CB8BF /* Views */,
+				BF423DD92364AA0600048B02 /* ViewModels */,
 			);
 			path = FirestoreSwiftSample;
 			sourceTree = "<group>";
@@ -254,6 +265,7 @@
 				BF739D9A23623ADE008CB8BF /* ListView.swift in Sources */,
 				BF739D9C23623D3A008CB8BF /* RightRow.swift in Sources */,
 				BF739D81236191EB008CB8BF /* SceneDelegate.swift in Sources */,
+				BF423DDB2364AA1E00048B02 /* ListViewModel.swift in Sources */,
 				BF739D83236191EB008CB8BF /* ContentView.swift in Sources */,
 				BF739D9E23623E23008CB8BF /* ChatBalloon.swift in Sources */,
 				BF24C6342362E99F00480998 /* FirestoreManager.swift in Sources */,
