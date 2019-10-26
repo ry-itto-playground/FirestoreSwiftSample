@@ -23,7 +23,6 @@ struct ContentView: View {
     var body: some View {
         VStack {
             ListView(viewModel: .init())
-            Spacer()
             HStack {
                 TextField(.init("Message to send"), text: $inputText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
