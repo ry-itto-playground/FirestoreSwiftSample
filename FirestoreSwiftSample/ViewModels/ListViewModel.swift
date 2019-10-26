@@ -35,7 +35,6 @@ final class ListViewModel: ObservableObject {
             .store(in: &cancellables)
 
         firestoreSubject
-            .print()
             .replaceError(with: [])
             .assign(to: \.messages, on: self)
             .store(in: &cancellables)
