@@ -8,5 +8,6 @@ target 'FirestoreSwiftSample' do
   # Pods for FirestoreSwiftSample
   # add pods for desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
+  pod 'Firebase/Core'
   pod 'FirebaseFirestoreSwift'
 end
