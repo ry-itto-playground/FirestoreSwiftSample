@@ -21,12 +21,13 @@ struct ChatBalloon: View {
                 .fontWeight(.regular)
                 .lineLimit(0)
                 .padding()
-        }.frame(width: 200, height: 50, alignment: .center)
+        }.frame(width: UIScreen.main.bounds.width - 100, height: 50, alignment: .center)
     }
 }
 
 struct ChatBalloon_Previews: PreviewProvider {
     static var previews: some View {
         ChatBalloon(text: "hoge")
+            .previewLayout(.sizeThatFits)
     }
 }

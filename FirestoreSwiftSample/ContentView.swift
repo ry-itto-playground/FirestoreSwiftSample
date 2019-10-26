@@ -9,8 +9,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var inputText = ""
+    @State private var showsSheet = false
+    let manager = FirestoreManager()
+    let document = MessageDocument(message: "fugafuga", userID: "123")
+
     var body: some View {
-        Text("Hello World")
+        VStack {
+            ListView()
+            Spacer()
+            HStack {
+                TextField(.init("hoge"), text: $inputText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                Button(action: {
+                    self.manager.addMessage(document: self.document)
+                }) {
+                    Text("hoge")
+                }
+            }
+        }
     }
 }
 
