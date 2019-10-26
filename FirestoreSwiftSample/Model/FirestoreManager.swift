@@ -7,6 +7,7 @@
 //
 
 import Combine
+import Foundation
 import Firebase
 import FirebaseFirestoreSwift
 
@@ -36,11 +37,14 @@ enum Collections: String {
     case messages
 }
 
-struct MessageDocument {
+struct MessageDocument: Identifiable, Decodable {
+    var id: UUID
+
     let message: String
     let userID: String
 
     init(message: String, userID: String) {
+        self.id = UUID()
         self.message = message
         self.userID = userID
     }
@@ -48,6 +52,7 @@ struct MessageDocument {
     init?(_ dictionary: [String:Any]) {
         guard let message = dictionary["message"] as? String,
             let userID = dictionary["userID"] as? String else { return nil }
+        self.id = UUID()
         self.message = message
         self.userID = userID
     }
@@ -57,5 +62,30 @@ struct MessageDocument {
             "message": message,
             "userID": userID
         ]
+    }
+}
+
+extension FirestoreManager {
+    var publisher: FirestorePublisher {
+        return FirestorePublisher(firestoreManager: self)
+    }
+}
+
+struct FirestorePublisher: Publisher {
+    typealias Output = [MessageDocument]
+    typealias Failure =  Error
+
+    let firestoreManager: FirestoreManager
+
+    func receive<S>(subscriber: S) where S : Subscriber, Failure == S.Failure, Output == S.Input {
+        firestoreManager.fetchDocuments { result in
+            switch result {
+            case .success(let messages):
+                _ = subscriber.receive(messages)
+                subscriber.receive(completion: .finished)
+            case .failure(let error):
+                subscriber.receive(completion: .failure(error))
+            }
+        }
     }
 }
