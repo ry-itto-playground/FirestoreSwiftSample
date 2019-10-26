@@ -26,9 +26,11 @@ struct FirestoreManager {
     }
 
     func fetchDocuments(completion: @escaping (Result<[MessageDocument], Error>) -> Void) {
-        db.collection(Collections.messages.rawValue).getDocuments { querySnapshot, error in
-            let documents = querySnapshot!.documents.compactMap { MessageDocument($0.data()) }
-            completion(.success(documents))
+        db.collection(Collections.messages.rawValue).addSnapshotListener { snapshot, error in
+            if let snapshot = snapshot {
+                let documents = snapshot.documents.compactMap { MessageDocument($0.data()) }
+                completion(.success(documents))
+            }
         }
     }
 }
@@ -82,7 +84,6 @@ struct FirestorePublisher: Publisher {
             switch result {
             case .success(let messages):
                 _ = subscriber.receive(messages)
-                subscriber.receive(completion: .finished)
             case .failure(let error):
                 subscriber.receive(completion: .failure(error))
             }
