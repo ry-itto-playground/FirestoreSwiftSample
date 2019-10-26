@@ -25,12 +25,12 @@ struct ContentView: View {
             ListView()
             Spacer()
             HStack {
-                TextField(.init("hoge"), text: $inputText)
+                TextField(.init("Message to send"), text: $inputText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button(action: action) {
-                    Text("hoge")
+                    Text("Send")
                 }
-            }
+            }.padding()
         }
     }
 }
