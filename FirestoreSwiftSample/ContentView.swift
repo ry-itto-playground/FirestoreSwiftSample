@@ -12,7 +12,13 @@ struct ContentView: View {
     @State private var inputText = ""
     @State private var showsSheet = false
     let manager = FirestoreManager()
-    let document = MessageDocument(message: "fugafuga", userID: "123")
+
+    var action: () -> Void {
+        return {
+            let document = MessageDocument(message: self.inputText, userID: "hoge")
+            _ = self.manager.addMessage(document: document)
+        }
+    }
 
     var body: some View {
         VStack {
@@ -21,9 +27,7 @@ struct ContentView: View {
             HStack {
                 TextField(.init("hoge"), text: $inputText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                Button(action: {
-                    self.manager.addMessage(document: self.document)
-                }) {
+                Button(action: action) {
                     Text("hoge")
                 }
             }
