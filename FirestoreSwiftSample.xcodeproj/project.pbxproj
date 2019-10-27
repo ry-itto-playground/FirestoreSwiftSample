@@ -21,6 +21,8 @@
 		BF739D9A23623ADE008CB8BF /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF739D9923623ADE008CB8BF /* ListView.swift */; };
 		BF739D9C23623D3A008CB8BF /* RightRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF739D9B23623D3A008CB8BF /* RightRow.swift */; };
 		BF739D9E23623E23008CB8BF /* ChatBalloon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF739D9D23623E23008CB8BF /* ChatBalloon.swift */; };
+		BFB5DF382364CA7300636506 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB5DF372364CA7300636506 /* Login.swift */; };
+		BFB5DF3A2365F07300636506 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB5DF392365F07200636506 /* FirebaseAuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		BF739D9923623ADE008CB8BF /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		BF739D9B23623D3A008CB8BF /* RightRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightRow.swift; sourceTree = "<group>"; };
 		BF739D9D23623E23008CB8BF /* ChatBalloon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBalloon.swift; sourceTree = "<group>"; };
+		BFB5DF372364CA7300636506 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		BFB5DF392365F07200636506 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				BF24C6332362E99F00480998 /* FirestoreManager.swift */,
+				BFB5DF392365F07200636506 /* FirebaseAuthManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 				BF739D9723619E8A008CB8BF /* LeftRow.swift */,
 				BF739D9923623ADE008CB8BF /* ListView.swift */,
 				BF739D9B23623D3A008CB8BF /* RightRow.swift */,
+				BFB5DF372364CA7300636506 /* Login.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,12 +267,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF739D9823619E8A008CB8BF /* LeftRow.swift in Sources */,
+				BFB5DF382364CA7300636506 /* Login.swift in Sources */,
 				BF739D7F236191EB008CB8BF /* AppDelegate.swift in Sources */,
 				BF739D9A23623ADE008CB8BF /* ListView.swift in Sources */,
 				BF739D9C23623D3A008CB8BF /* RightRow.swift in Sources */,
 				BF739D81236191EB008CB8BF /* SceneDelegate.swift in Sources */,
 				BF423DDB2364AA1E00048B02 /* ListViewModel.swift in Sources */,
 				BF739D83236191EB008CB8BF /* ContentView.swift in Sources */,
+				BFB5DF3A2365F07300636506 /* FirebaseAuthManager.swift in Sources */,
 				BF739D9E23623E23008CB8BF /* ChatBalloon.swift in Sources */,
 				BF24C6342362E99F00480998 /* FirestoreManager.swift in Sources */,
 			);
